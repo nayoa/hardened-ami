@@ -1,0 +1,2 @@
+# hardened-ami
+
