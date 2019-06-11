@@ -22,7 +22,11 @@
       "instance_type": "t2.medium",
       "ssh_username": "ubuntu",
       "ami_name": "hardened-ami-{{timestamp}}",
-      "ami_description": "AMI with DevSec OS and SSH Hardening"
+      "ami_description": "AMI with DevSec OS and SSH Hardening",
+      "tags": {
+        "Name": "hardened-ami-{{isotime \"2006-01-02\"}}",
+        "ManagedBy": "Product Team"
+      }
     }],
     "provisioners": [
     {
