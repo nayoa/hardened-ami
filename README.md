@@ -1,2 +1,2 @@
-# hardened-ami
+# AWS Hardened AMI
 
