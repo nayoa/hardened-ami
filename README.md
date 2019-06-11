@@ -1,10 +1,10 @@
 # AWS Hardened AMI
 
-This repository builds an AMI that uses the [DevSec Hardening Framework](https://dev-sec.io/) [SSH](https://github.com/dev-sec/ansible-ssh-hardening) and [OS](https://github.com/dev-sec/ansible-os-hardening) hardening ansible roles. The roles provide numerous security-related configurations that follow the industries security best practices.
+This repository builds an AMI that uses the [DevSec Hardening Framework](https://dev-sec.io/) [SSH](https://github.com/dev-sec/ansible-ssh-hardening) and [OS](https://github.com/dev-sec/ansible-os-hardening) hardening ansible roles. The roles provide numerous security-related configurations that follow security best practices.
 
 ## Why
 
-We want to ensure all instances and AMI's have a secure configuration and reduce the likelihood of attacks. The DevSec community keeps the playbooks up to do date with the DevSec Linux Security Baseline which gives us the extra security we need.
+We want to ensure all instances and AMI's we provision have a secure configuration and the likelihood of attacks is minimal. The DevSec community keeps the playbooks up to do date with the DevSec Linux Security Baseline which gives us the extra security we need.
 
 ## Source code structure
 
