@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: true
+  become: yes
+  roles:
+    - dev-sec.os-hardening
+    - dev-sec.ssh-hardening
+  vars:
+    ssh_use_pam: true

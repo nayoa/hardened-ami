@@ -1,0 +1,43 @@
+image:
+  name: hashicorp/packer:light
+  entrypoint:
+    - '/usr/bin/env'
+    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+
+stages:
+  - test
+  - deploy
+
+packer_validate:
+  stage: test
+  script:
+    - packer --version
+    - packer validate packer.json
+
+shellcheck:
+  stage: test
+  image: koalaman/shellcheck-alpine
+  script:
+    - shellcheck scripts/install_ansible.sh
+
+deploy:dev_account:
+  only:
+    refs:
+    - master
+  stage: deploy
+  script:
+    - packer build packer.json
+  environment:
+    name: aws-dev-account
+  when: manual
+
+deploy:prod_account:
+  only:
+    refs:
+    - master
+  stage: deploy
+  script:
+    - packer build packer.json
+  environment:
+    name: aws-prod-account
+  when: manual
