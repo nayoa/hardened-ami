@@ -7,3 +7,4 @@
     - dev-sec.ssh-hardening
   vars:
     ssh_use_pam: true
+    ssh_allow_agent_forwarding: true
