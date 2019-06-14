@@ -1,6 +1,4 @@
-#!/bin/bash
-
-set -e
+#!/bin/sh
 
 # Update the OS to begin with to catch up on the latest packages.
 sudo apt-get update -y
