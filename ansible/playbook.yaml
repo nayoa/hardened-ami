@@ -6,5 +6,11 @@
     - dev-sec.os-hardening
     - dev-sec.ssh-hardening
   vars:
+    network_ipv6_enable: true
     ssh_use_pam: true
     ssh_allow_agent_forwarding: true
+    ssh_remote_hosts:
+      - names: ['example.com', 'example2.com']
+        options: ['Port 2222', 'ForwardAgent yes']
+      - names: ['example3.com']
+        options: ['StrictHostKeyChecking no']
